@@ -1,0 +1,50 @@
+{
+  "name": "lockfile-deps",
+  "version": "0.0.0",
+  "description": "list dependencies for a specific package based on the lock",
+  "main": "./src/api.js",
+  "bin": {
+    "lockfile-deps": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "eslint": "eslint --quiet . --ext=.js",
+    "lint": "npm run eslint",
+    "lint:fix": "npm run eslint -- --fix"
+  },
+  "author": "Noah Sugarman <noahsug@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:noahsug/lockfile-deps"
+  },
+  "bugs": {
+    "url": "https://github.com/noahsug/lockfile-deps/issues"
+  },
+  "homepage": "https://github.com/noahsug/lockfile-deps#readme",
+  "keywords": [
+    "lockfile",
+    "dependencies",
+    "npm",
+    "ls"
+  ],
+  "dependencies": {
+    "semver": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.2",
+    "jest": "^24.8.0",
+    "prettier": "^1.15.3"
+  },
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
+  }
+}
