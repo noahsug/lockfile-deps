@@ -8,7 +8,7 @@ npm i -g lockfile-deps
 
 ## Example
 ```
-list-lockfile-deps @babel/highlight
+lockfile-deps @babel/highlight
 
 // reads <cwd>/package-lock.json or <cwd>/npm-shrinkwrap.json and outputs:
 [
@@ -17,12 +17,12 @@ list-lockfile-deps @babel/highlight
     "version": "7.0.0"
   },
   {
-    "name": "chalk",
-    "version": "2.4.2"
-  },
-  {
     "name": "ansi-styles",
     "version": "3.2.1"
+  },
+  {
+    "name": "chalk",
+    "version": "2.4.2"
   },
   ...
 ]
