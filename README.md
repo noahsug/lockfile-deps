@@ -1,5 +1,5 @@
 # lockfile-deps
-> lists recursive dependencies for a package by parsing npm-shrinkwrap.json or package-lock.json
+> lists recursive dependencies of a package by parsing npm-shrinkwrap.json or package-lock.json
 
 ## Install
 ```
