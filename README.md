@@ -6,7 +6,7 @@
 npm i -g lockfile-deps
 ```
 
-## Example
+## Examples
 ```sh
 lockfile-deps @babel/highlight
 
@@ -27,9 +27,6 @@ lockfile-deps @babel/highlight
 #   ...
 # ]
 ```
-
-## Advanced examples
-
 
 ```sh
 lockfile-deps @babel/highlight @babel/parser # supports multiple packages
