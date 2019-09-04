@@ -1,14 +1,9 @@
 # lockfile-deps
 > lists recursive dependencies of a package by parsing npm-shrinkwrap.json or package-lock.json
 
-## Install
-```
-npm i -g lockfile-deps
-```
-
 ## Examples
 ```sh
-lockfile-deps @babel/highlight
+npx lockfile-deps @babel/highlight
 
 # reads <cwd>/package-lock.json or <cwd>/npm-shrinkwrap.json and outputs:
 # [
@@ -29,10 +24,10 @@ lockfile-deps @babel/highlight
 ```
 
 ```sh
-lockfile-deps @babel/highlight @babel/parser # supports multiple packages
+npx lockfile-deps @babel/highlight @babel/parser # supports multiple packages
 
 ```
 
 ```sh
-lockfile-deps # root project is used by default
+npx lockfile-deps # root project is used by default
 ```
