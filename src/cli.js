@@ -5,19 +5,21 @@ function parseArgs(argv) {
   const argEndIndex = argv.includes('--') ? argv.indexOf('--') : argv.length;
   const args = argv.slice(2, argEndIndex);
   const help = args.find((arg) => arg.startsWith('--help') || arg.startsWith('-h'));
-  const pkg = args.find((arg) => !arg.startsWith('-'));
+  const pkgs = args.filter((arg) => !arg.startsWith('-'));
   return {
     help,
-    pkg,
+    pkgs,
   };
 }
 
 const root = process.cwd();
-const { pkg, help } = parseArgs(process.argv);
+const { pkgs, help } = parseArgs(process.argv);
 
 if (help) {
-  console.log('Usage: lockfile-deps [@scope/]<package>');
+  console.log('Usage: lockfile-deps [[@scope/]<package> [@scope/]<package> ...]');
 } else {
-  const deps = getLockfileDeps(root, pkg);
-  console.log(JSON.stringify(deps, null, 2));
+  pkgs.forEach((pkg) => {
+    const deps = getLockfileDeps(root, pkg);
+    console.log(JSON.stringify(deps, null, 2));
+  });
 }

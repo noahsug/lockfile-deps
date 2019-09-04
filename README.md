@@ -27,3 +27,16 @@ lockfile-deps @babel/highlight
   ...
 ]
 ```
+
+## Advanced examples
+
+
+```
+lockfile-deps @babel/highlight @babel/parser
+```
+> Prints dependencies from multiple packages.
+
+```
+lockfile-deps
+```
+> If no packages are specified, the root project is used.
