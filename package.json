@@ -1,6 +1,6 @@
 {
   "name": "lockfile-deps",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "list dependencies for a specific package based on the lock",
   "main": "./src/api.js",
   "bin": {
