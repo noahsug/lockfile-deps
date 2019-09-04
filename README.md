@@ -7,36 +7,35 @@ npm i -g lockfile-deps
 ```
 
 ## Example
-```
+```sh
 lockfile-deps @babel/highlight
 
-// reads <cwd>/package-lock.json or <cwd>/npm-shrinkwrap.json and outputs:
-[
-  {
-    "name": "@babel/highlight",
-    "version": "7.0.0"
-  },
-  {
-    "name": "ansi-styles",
-    "version": "3.2.1"
-  },
-  {
-    "name": "chalk",
-    "version": "2.4.2"
-  },
-  ...
-]
+# reads <cwd>/package-lock.json or <cwd>/npm-shrinkwrap.json and outputs:
+# [
+#   {
+#     "name": "@babel/highlight",
+#     "version": "7.0.0"
+#   },
+#   {
+#     "name": "ansi-styles",
+#     "version": "3.2.1"
+#   },
+#   {
+#     "name": "chalk",
+#     "version": "2.4.2"
+#   },
+#   ...
+# ]
 ```
 
 ## Advanced examples
 
 
-```
-lockfile-deps @babel/highlight @babel/parser
-```
-> Prints dependencies from multiple packages.
+```sh
+lockfile-deps @babel/highlight @babel/parser # supports multiple packages
 
 ```
-lockfile-deps
+
+```sh
+lockfile-deps # root project is used by default
 ```
-> If no packages are specified, the root project is used.
